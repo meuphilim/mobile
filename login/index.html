@@ -1,48 +1,155 @@
 <!DOCTYPE html>
-<html lang="pt" >
+<!-- saved from url=(0046)http://177.202.43.19/index.php?tipo=minhaconta -->
+<html lang="pt-BR">
 
 <head>
-  <meta charset="UTF-8">
-  <title>Material Design Login Form</title>
-  
-  
-  
-      <link rel="stylesheet" href="css/style.css">
+    <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
 
-  
+    <link rel="shortcut icon" href="http://177.202.43.19/arquivos/kisspngcomputericonsclipartsalesico5ab10c4447ee93.1005119215215524522947.png">
+    <title>M2 Telecomunica��es</title>
+    <meta name="description" content="">
+    <meta property="og:description" content="">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="M2 Telecomunica��es">
+    <meta property="og:url" content="http://177.202.43.19/index.php?tipo=minhaconta">
+    <meta property="og:site_name" content="M2 Telecomunica��es">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/style.css" rel="stylesheet">
+    <script async="" src="js/analytics.js">
+    </script>
+    <script type="text/javascript" src="js/jquery.js">
+    </script>
+    <script type="text/javascript" src="js/mask.js">
+    </script>
+    <script type="text/javascript" src="js/hs_scripts.js">
+    </script>
+
 </head>
 
-<body>
-<!--
-  <hgroup>
-  <h1>Central do Assinante</h1>
-  <h3>M2 Telecomunicações</h3>
-</hgroup> -->
-<form>
-  <!--
-<div class="group">
-    <input type="text"><span class="highlight"></span><span class="bar"></span>
-    <label>Name</label>
-  </div> 
-  -->
-  <div class="group">
-    <input type="number"><span class="highlight"></span><span class="bar"></span>
-    <label>CPF</label>
-  </div>
-  <button type="button" class="button buttonBlue">Entrar<div class="ripples buttonRipples"><span class="ripplesCircle"></span></div>
-  </button>
-</form>
-<footer><a href="https://www.ixcsoft.com.br/" target="_blank"><img src="https://www.ixcsoft.com.br/arquivos/logo.svg"></a>
-  <p>You Gotta Love <a href="http://www.google.com.br/" target="_blank">Google</a></p>
-</footer>
-  <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<body data-aos-easing="ease" data-aos-duration="400" data-aos-delay="0" style="overflow: visible;">
+    <div>
+        <div>
+            <div>
+                <div>
+                    <hgroup>
+                        <h2>Central do Assinante</h2>
+                    </hgroup>
+                    <form id="form_login" role="form" method="post" action="http://177.202.43.19/index.php?tipo=minhaconta">
+                        <div class="group">
+                            <input type="text" name="mail" id="mail" value="" required="" autocomplete="off">
+                            <label for="mail">CPF/CNPJ do Titular</label>
+                            <input type="hidden" name="login_conta" id="contaS" value="S">
+                        </div>
+                        <button type="submit" class="button buttonBlue">Continuar<div class="ripples buttonRipples"><span class="ripplesCircle"></span></div></button>
+                        <input type="hidden" name="tipo_login" id="tipo_login" value="C">
 
-  
-
-    <script  src="js/index.js"></script>
-
-
-
+                    </form>
+                </div>
+                <script type="text/javascript">
+                    $(document).ready(function(e) {
+                        var b = $('body').height();
+                        var w = $(window).height();
+                        if (b < w) {
+                            $('.centro').css('min-height', ($('.centro').height() + (w - b)).toString() + 'px');
+                        }
+                        $('#form_login').submit(function(e) {
+                            var mensagem = "";
+                            $('#mansagens').html('');
+                            if ($('input[name=mail]').val() == '') {
+                                $('input[name=mail]').closest('div').addClass('has-error');
+                                if ('CPF do Titular:' != '') {
+                                    mensagem += "CPF do Titular:!<br>";
+                                } else {
+                                    mensagem += "Preencha o E-mail!<br>";
+                                }
+                            };
+                            if ($('input[name=login_conta]:checked').val() == 'S' && $('input[name=senha]').val() == '' && 'C' != 'C' && 'C' != 'ID') {
+                                $('input[name=senha]').closest('div').addClass('has-error');
+                                mensagem += "Preencha a Senha!<br>";
+                            }
+                            if (mensagem != '') {
+                                $('#mansagens').html('<div class="alert alert-danger">' + mensagem + '</div>');
+                                return false;
+                            }
+                        });
+                    });
+                </script>
+            </div>
+        </div>
+    </div>
+    </div>
+    <script>
+        (function(d, e, j, h, f, c, b) {
+            d.GoogleAnalyticsObject = f;
+            d[f] = d[f] || function() {
+                (d[f].q = d[f].q || []).push(arguments)
+            }, d[f].l = 1 * new Date();
+            c = e.createElement(j), b = e.getElementsByTagName(j)[0];
+            c.async = 1;
+            c.src = h;
+            b.parentNode.insertBefore(c, b)
+        })(window, document, "script", "//www.google-analytics.com/analytics.js", "ga");
+        ga("create", "UA-41553656-3", "m2tel.com.br");
+        ga("send", "pageview");
+    </script>
+    <script type="text/javascript">
+        /*<![CDATA[*/
+        ixc_stats = {
+            referencia: function() {
+                var a = "";
+                try {
+                    a = window.top.document.referrer
+                } catch (b) {
+                    if (window.parent) {
+                        try {
+                            a = window.parent.document.referrer
+                        } catch (c) {
+                            a = ""
+                        }
+                    }
+                }
+                if (a === "") {
+                    a = document.referrer
+                }
+                return escape(a)
+            },
+            titulo: function() {
+                return document.title
+            },
+            url: function() {
+                var b = document.location.href;
+                var a = b.indexOf("//");
+                if (a > 0) {
+                    b = b.substr(a)
+                }
+                return escape(b)
+            },
+            envia: function() {
+                var a = "stats.php";
+                a += "?ref=" + ixc_stats.referencia();
+                a += "&res=" + screen.width + "x" + screen.height;
+                a += "&col=" + screen.colorDepth;
+                a += "&titulo=" + ixc_stats.titulo();
+                a += "&url=" + ixc_stats.url();
+                var b = new Image(1, 1);
+                b.src = a
+            },
+            update: function() {
+                var a = "stats.php?update=S&r=" + Math.random();
+                var b = new Image(1, 1);
+                b.src = a
+            }
+        };
+        ixc_stats.envia();
+        var r = window.setInterval("ixc_stats.update()", 30000); /*]]>*/
+    </script>
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'>
+    </script>
+    <script src="js/index.js">
+    </script>
+    <footer><a href="https://www.ixcsoft.com.br/" target="_blank"><img src="https://www.ixcsoft.com.br/arquivos/logo.svg"></a>
+        <p>You Gotta Love <a href="http://www.google.com.br/" target="_blank">Google</a></p>
+    </footer>
 
 </body>
 
